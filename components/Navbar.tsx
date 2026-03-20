@@ -21,37 +21,31 @@ export function Navbar() {
 
         <div className="h-4 w-px bg-white/10 ml-1" />
 
-        {/* breadcrumb */}
-        <div className="flex items-center gap-1.5 mono text-[11px] text-[#4a5252]">
+        {/* nav links */}
+        <div className="flex items-center gap-3 mono text-[12px] text-[#4a5252]">
+         
           <Link
             href="/"
-            className={`transition-colors hover:text-[#8a9696] ${pathname === "/" ? "text-[#a8c57e]" : ""}`}
+            className={`transition-colors hover:text-[#8a9696] ${pathname === "/diagnostics" ? "text-[#a8c57e]" : ""}`}
           >
-            Upload
+            Crop Disease Detector
           </Link>
-          {(pathname === "/diagnostics" || pathname === "/yields") && (
-            <>
-              <span className="text-[#2a3030]">/</span>
-              <Link
-                href="/yields"
-                className={`transition-colors hover:text-[#8a9696] ${pathname === "/yields" ? "text-[#e2ded8]" : "text-[#4a5252]"}`}
-              >
-                Yield Predictor
-              </Link>
-            </>
-          )}
+          <Link
+            href="/yields"
+            className={`transition-colors hover:text-[#8a9696] ${pathname === "/yields" ? "text-[#a8c57e]" : ""}`}
+          >
+            Yield Predictor
+          </Link>
         </div>
 
         <div className="ml-auto flex items-center gap-2">
+          <button className="mono text-[11px] text-[#a8c57e] border border-[#a8c57e]/30 hover:bg-[#a8c57e]/10 px-3 py-1.5 rounded-xl">Login</button>
           {inFlight > 0 && (
             <span className="mono text-[11px] text-[#a8c57e] bg-[#a8c57e]/10 px-3 py-1 rounded-full flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#a8c57e] pulse-dot" />
               Analyzing {inFlight}
             </span>
           )}
-          <span className="mono text-[11px] text-[#4a5252] bg-white/[0.03] border border-white/5 px-3 py-1 rounded-full">
-            {doneImages.length} ready
-          </span>
         </div>
       </div>
     </nav>
