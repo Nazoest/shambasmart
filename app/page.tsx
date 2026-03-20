@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAppContext } from "@/context/AppContext";
 import { Navbar } from "@/components/Navbar";
@@ -69,6 +70,15 @@ export default function HomePage() {
             Upload photos or take a picture of your crops. Our model identifies diseases and gives
             you an action plan in seconds.
           </p>
+
+          <div className="flex items-center gap-3">
+            <Link
+              href="/yields"
+              className="inline-flex items-center gap-2 bg-[#a8c57e] hover:bg-[#b8d48e] text-[#0a0b0b] font-semibold text-[13px] px-4 py-2 rounded-xl"
+            >
+              📊 Go to Yield Predictor
+            </Link>
+          </div>
         </div>
 
         {/* Drop Zone */}

@@ -29,10 +29,15 @@ export function Navbar() {
           >
             Upload
           </Link>
-          {pathname === "/diagnostics" && (
+          {(pathname === "/diagnostics" || pathname === "/yields") && (
             <>
               <span className="text-[#2a3030]">/</span>
-              <span className="text-[#e2ded8]">Diagnostics</span>
+              <Link
+                href="/yields"
+                className={`transition-colors hover:text-[#8a9696] ${pathname === "/yields" ? "text-[#e2ded8]" : "text-[#4a5252]"}`}
+              >
+                Yield Predictor
+              </Link>
             </>
           )}
         </div>
