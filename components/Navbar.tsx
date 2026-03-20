@@ -33,8 +33,8 @@ export function Navbar() {
         </button>
 
         <div className="hidden sm:flex items-center gap-4 ml-4">
-          <Link href="/" className={navLinkClasses("/")}>Upload</Link>
-          <Link href="/diagnostics" className={navLinkClasses("/diagnostics")}>Crop Disease Detector</Link>
+          <Link href="/" className={navLinkClasses("/")}>Home</Link>
+          <Link href="/" className={navLinkClasses("/")}>Crop Disease Detector</Link>
           <Link href="/yields" className={navLinkClasses("/yields")}>Yield Predictor</Link>
         </div>
 
@@ -54,8 +54,8 @@ export function Navbar() {
 
       {isOpen && (
         <div className="sm:hidden border-t border-white/10 bg-[#0a0b0b]/95 px-4 py-3 space-y-2">
-          <Link href="/" className={navLinkClasses("/")}>Upload</Link>
-          <Link href="/diagnostics" className={navLinkClasses("/diagnostics")}>Crop Disease Detector</Link>
+          <Link href="/" className={navLinkClasses("/")}>Home</Link>
+          <Link href="/" className={navLinkClasses("/")}>Crop Disease Detector</Link>
           <Link href="/yields" className={navLinkClasses("/yields")}>Yield Predictor</Link>
           <button className="w-full text-left mono text-[11px] text-[#a8c57e] border border-[#a8c57e]/30 hover:bg-[#a8c57e]/10 px-3 py-2 rounded-xl">Login</button>
           <div className="flex items-center gap-2">
